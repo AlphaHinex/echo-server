@@ -18,7 +18,7 @@ Echo server run at http://localhost:8080
 Example:
 
 ```bash
-$ curl http://localhost:8080/path?a=1&b=2
+$ curl "http://localhost:8080/path?a=1&b=2"
 {"a":"1","b":"2"}
 $ curl http://localhost:8080 -d '<xml><def></def></xml>'
 <xml><def></def></xml>
