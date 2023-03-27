@@ -14,11 +14,7 @@ let parsePostData = function(req, res, callback) {
   let postData = '';
   req.on('data', (chunk) => { postData += chunk; });
   req.on('end', () => {
-    let data = postData;
-    try {
-      data = JSON.parse(postData);
-    } catch(err) { }
-    callback(req, res, data);
+    callback(req, res, postData);
   });
 };
 
